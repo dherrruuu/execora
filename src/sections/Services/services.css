@@ -1,0 +1,480 @@
+/* ==========================================================
+   SERVICES
+========================================================== */
+
+.services{
+    padding:180px 7vw;
+    background:#0b0b0b;
+    position:relative;
+    overflow:hidden;
+}
+
+.services::before{
+    content:"";
+    position:absolute;
+    width:700px;
+    height:700px;
+    right:-250px;
+    top:-250px;
+    border-radius:50%;
+    background:radial-gradient(circle,
+        rgba(201,169,110,.08),
+        transparent 70%);
+    pointer-events:none;
+}
+
+.services-container{
+    max-width:1450px;
+    margin:auto;
+    position:relative;
+    z-index:2;
+}
+
+
+/* ==========================================================
+HEADER
+========================================================== */
+
+.services-header{
+    margin-bottom:90px;
+}
+
+.services-tag{
+
+    display:inline-flex;
+    align-items:center;
+    gap:12px;
+
+    color:#C9A96E;
+
+    text-transform:uppercase;
+
+    letter-spacing:.45em;
+
+    font-size:.82rem;
+
+}
+
+.services-tag::before{
+
+    content:"";
+
+    width:8px;
+    height:8px;
+
+    border-radius:50%;
+
+    background:#C9A96E;
+
+}
+
+.services-title{
+
+    margin-top:34px;
+
+    font-size:clamp(3.5rem,7vw,6.5rem);
+
+    line-height:.92;
+
+    font-weight:500;
+
+    color:white;
+
+    letter-spacing:-.05em;
+
+}
+
+.services-intro{
+
+    margin-top:30px;
+
+    max-width:650px;
+
+    color:#8d8d8d;
+
+    line-height:2;
+
+    font-size:1.05rem;
+
+}
+
+
+/* ==========================================================
+LIST
+========================================================== */
+
+.services-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:80px;
+
+}
+
+
+/* ==========================================================
+CARD
+========================================================== */
+
+.service-card{
+
+    display:grid;
+
+    grid-template-columns:1fr 460px;
+
+    gap:80px;
+
+    align-items:center;
+
+    padding:60px;
+
+    border-radius:42px;
+
+    background:rgba(255,255,255,.03);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(20px);
+
+    transition:.5s;
+
+}
+
+.service-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:rgba(201,169,110,.35);
+
+    box-shadow:
+        0 35px 90px rgba(0,0,0,.35);
+
+}
+
+
+/* Alternate Layout */
+
+.service-card:nth-child(even){
+
+    grid-template-columns:460px 1fr;
+
+}
+
+.service-card:nth-child(even) .service-content{
+
+    order:2;
+
+}
+
+.service-card:nth-child(even) .service-image{
+
+    order:1;
+
+}
+
+
+/* ==========================================================
+CONTENT
+========================================================== */
+
+.service-number{
+
+    display:block;
+
+    color:#C9A96E;
+
+    font-size:.95rem;
+
+    letter-spacing:.35em;
+
+    margin-bottom:20px;
+
+}
+
+.service-content h3{
+
+    font-size:3rem;
+
+    color:white;
+
+    font-weight:500;
+
+    line-height:1.05;
+
+    transition:.4s;
+
+}
+
+.service-content p{
+
+    margin-top:26px;
+
+    color:#9f9f9f;
+
+    line-height:2;
+
+    max-width:560px;
+
+}
+
+.service-card:hover h3{
+
+    color:#C9A96E;
+
+}
+
+
+/* ==========================================================
+BUTTON
+========================================================== */
+
+.service-button{
+
+    margin-top:42px;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:15px 28px;
+
+    border:none;
+
+    border-radius:999px;
+
+    cursor:pointer;
+
+    background:rgba(255,255,255,.06);
+
+    color:white;
+
+    transition:.35s;
+
+    backdrop-filter:blur(20px);
+
+}
+
+.service-button svg{
+
+    transition:.35s;
+
+}
+
+.service-button:hover{
+
+    background:#C9A96E;
+
+    color:#111;
+
+}
+
+.service-button:hover svg{
+
+    transform:rotate(45deg);
+
+}
+
+
+/* ==========================================================
+IMAGE
+========================================================== */
+
+.service-image{
+
+    width:100%;
+
+    height:420px;
+
+    overflow:hidden;
+
+    transition:.7s;
+
+}
+
+.service-image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+
+    transition:1.2s ease;
+
+}
+
+.service-card:hover img{
+
+    transform:scale(1.08);
+
+}
+
+
+/* ==========================================================
+ORGANIC SHAPES
+========================================================== */
+
+.shape-1 .service-image{
+
+    border-radius:
+        62% 38% 52% 48% /
+        42% 58% 42% 58%;
+
+}
+
+.shape-2 .service-image{
+
+    border-radius:
+        40% 60% 44% 56% /
+        58% 40% 60% 42%;
+
+}
+
+.shape-3 .service-image{
+
+    border-radius:
+        58% 42% 66% 34% /
+        36% 62% 38% 64%;
+
+}
+
+.shape-4 .service-image{
+
+    border-radius:
+        70% 30% 55% 45% /
+        44% 62% 38% 56%;
+
+}
+
+.shape-5 .service-image{
+
+    border-radius:
+        46% 54% 34% 66% /
+        58% 40% 60% 42%;
+
+}
+
+.shape-6 .service-image{
+
+    border-radius:
+        66% 34% 46% 54% /
+        52% 48% 60% 40%;
+
+}
+
+
+/* Hover Morph */
+
+.service-card:hover .service-image{
+
+    border-radius:
+        42% 58% 60% 40% /
+        58% 42% 46% 54%;
+
+}
+
+
+/* ==========================================================
+RESPONSIVE
+========================================================== */
+
+@media(max-width:1100px){
+
+.service-card{
+
+grid-template-columns:1fr;
+
+gap:45px;
+
+}
+
+.service-card:nth-child(even){
+
+grid-template-columns:1fr;
+
+}
+
+.service-card:nth-child(even) .service-content{
+
+order:1;
+
+}
+
+.service-card:nth-child(even) .service-image{
+
+order:2;
+
+}
+
+.service-image{
+
+height:320px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.services{
+
+padding:120px 24px;
+
+}
+
+.services-title{
+
+font-size:3rem;
+
+}
+
+.service-card{
+
+padding:35px;
+
+border-radius:28px;
+
+}
+
+.service-content h3{
+
+font-size:2rem;
+
+}
+
+.service-image{
+
+height:250px;
+
+}
+
+}
+
+@media(max-width:500px){
+
+.service-card{
+
+padding:28px;
+
+}
+
+.services-title{
+
+font-size:2.5rem;
+
+}
+
+.service-button{
+
+width:100%;
+justify-content:center;
+
+}
+
+}
