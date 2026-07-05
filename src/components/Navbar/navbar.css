@@ -1,3 +1,48 @@
+/* ==========================================
+   MOBILE MENU BUTTON
+========================================== */
+
+.menu-toggle{
+
+    display:none;
+
+    width:48px;
+
+    height:48px;
+
+    border:none;
+
+    background:transparent;
+
+    color:white;
+
+    cursor:pointer;
+
+    align-items:center;
+
+    justify-content:center;
+
+    z-index:1200;
+
+}
+
+/* Desktop remains exactly the same */
+
+@media (max-width:768px){
+
+    nav{
+
+        display:none;
+
+    }
+
+    .menu-toggle{
+
+        display:flex;
+
+    }
+
+}
 .navbar{
 
 position:fixed;

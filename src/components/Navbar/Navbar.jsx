@@ -70,6 +70,15 @@ export default function Navbar() {
                 ))}
 
             </nav>
+                <button
+                    className="menu-toggle"
+                    onClick={() => setMenuOpen(!menuOpen)}
+                >
+
+                {menuOpen ? <X size={24} /> : <Menu size={24} />}
+
+            </button>
+            
 
             <button
                 className="nav-btn"
