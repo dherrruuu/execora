@@ -346,3 +346,12 @@ transform:translate(-50%,0);
 }
 
 }
+@media (max-width:768px){
+
+    .nav-btn{
+
+        display:none;
+
+    }
+
+}
