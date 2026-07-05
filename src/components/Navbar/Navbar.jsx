@@ -81,7 +81,7 @@ export default function Navbar() {
 
                 <a
                     className="nav-btn"
-                    href="https://wa.me/91XXXXXXXXXX"
+                    href="https://wa.me/918209592340"
                     target="_blank"
                     rel="noopener noreferrer"
                 >
@@ -119,7 +119,7 @@ export default function Navbar() {
 
                     <a
                         className="mobile-talk-btn"
-                        href="https://wa.me/8209592340"
+                        href="https://wa.me/918209592340"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
