@@ -19,8 +19,7 @@ export default function Navbar() {
 
         window.addEventListener("scroll", handleScroll);
 
-        return () =>
-            window.removeEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
 
     }, []);
 
@@ -43,55 +42,97 @@ export default function Navbar() {
 
     return (
 
-        <header className={`navbar ${scrolled ? "navbar-scrolled" : ""}`}>
+        <>
 
-            <div
-                className="navbar-logo"
-                onClick={() => scrollToSection("home")}
-            >
+            <header className={`navbar ${scrolled ? "navbar-scrolled" : ""}`}>
 
-                EXECORA
+                <div
+                    className="navbar-logo"
+                    onClick={() => scrollToSection("home")}
+                >
+                    EXECORA
+                </div>
 
-            </div>
+                <nav>
 
-            <nav>
+                    {navLinks.map((link) => (
 
-                {navLinks.map((link) => (
+                        <button
+                            key={link.id}
+                            onClick={() => scrollToSection(link.section)}
+                        >
 
-                    <button
-                        key={link.id}
-                        onClick={() => scrollToSection(link.section)}
-                    >
+                            {link.title}
 
-                        {link.title}
+                        </button>
 
-                    </button>
+                    ))}
 
-                ))}
+                </nav>
 
-            </nav>
                 <button
                     className="menu-toggle"
                     onClick={() => setMenuOpen(!menuOpen)}
                 >
 
-                {menuOpen ? <X size={24} /> : <Menu size={24} />}
+                    {menuOpen ? <X size={24} /> : <Menu size={24} />}
 
-            </button>
-            
+                </button>
 
-            <button
-                className="nav-btn"
-                onClick={() => scrollToSection("contact")}
-            >
+                <a
+                    className="nav-btn"
+                    href="https://wa.me/91XXXXXXXXXX"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
 
-                Let's Talk
+                    Let's Talk
 
-                <ArrowRight size={18} />
+                    <ArrowRight size={18} />
 
-            </button>
+                </a>
 
-        </header>
+            </header>
+
+            {menuOpen && (
+
+                <div className="mobile-menu">
+
+                    {navLinks.map((link) => (
+
+                        <button
+                            key={link.id}
+                            onClick={() => {
+
+                                scrollToSection(link.section);
+
+                                setMenuOpen(false);
+
+                            }}
+                        >
+
+                            {link.title}
+
+                        </button>
+
+                    ))}
+
+                    <a
+                        className="mobile-talk-btn"
+                        href="https://wa.me/918209592340"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+
+                        Let's Talk
+
+                    </a>
+
+                </div>
+
+            )}
+
+        </>
 
     );
 
