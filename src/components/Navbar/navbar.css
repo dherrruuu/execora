@@ -229,3 +229,120 @@ padding:0 22px;
 }
 
 }
+/* ==========================================
+   MOBILE MENU
+========================================== */
+
+.mobile-menu{
+
+    display:none;
+
+}
+
+@media (max-width:768px){
+
+.mobile-menu{
+
+    position:fixed;
+
+    top:88px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:92%;
+
+    padding:28px;
+
+    border-radius:24px;
+
+    background:rgba(15,15,15,.96);
+
+    backdrop-filter:blur(24px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+    z-index:999;
+
+    animation:menuFade .35s ease;
+
+}
+
+.mobile-menu button{
+
+    background:none;
+
+    border:none;
+
+    color:white;
+
+    font-size:1.1rem;
+
+    text-align:left;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.mobile-menu button:hover{
+
+    color:#C9A96E;
+
+    padding-left:10px;
+
+}
+
+.mobile-talk-btn{
+
+    margin-top:10px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:14px;
+
+    border-radius:999px;
+
+    text-decoration:none;
+
+    background:#C9A96E;
+
+    color:black;
+
+    font-weight:600;
+
+}
+
+}
+
+@keyframes menuFade{
+
+from{
+
+opacity:0;
+
+transform:translate(-50%,-20px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translate(-50%,0);
+
+}
+
+}
