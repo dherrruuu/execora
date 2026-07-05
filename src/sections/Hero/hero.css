@@ -76,23 +76,19 @@
    LAYOUT
 ========================= */
 
-.hero-container {
+.hero-container{
 
-    position: relative;
+    position:relative;
 
-    z-index: 5;
+    z-index:5;
 
-    width: min(1400px,92%);
+    display:grid;
 
-    margin: auto;
+    grid-template-columns:1.15fr .85fr;
 
-    display: grid;
+    gap:clamp(40px,6vw,90px);
 
-    grid-template-columns: 1.15fr .85fr;
-
-    gap: 90px;
-
-    align-items: center;
+    align-items:center;
 
 }
 

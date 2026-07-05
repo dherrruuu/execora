@@ -1,0 +1,67 @@
+/* ==========================================
+   GLOBAL LAYOUT
+========================================== */
+
+.container{
+
+    width:min(var(--container), calc(100% - (var(--gutter) * 2)));
+
+    margin-inline:auto;
+
+}
+
+.section{
+
+    padding-block:var(--section-padding);
+
+}
+
+/* ==========================================
+   COMMON GRID
+========================================== */
+
+.grid-2{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:clamp(40px,6vw,100px);
+
+    align-items:center;
+
+}
+
+.grid-3{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:clamp(24px,3vw,40px);
+
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width:992px){
+
+    .grid-2{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    .grid-3{
+
+        grid-template-columns:1fr;
+
+    }
+
+}

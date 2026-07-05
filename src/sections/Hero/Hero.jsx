@@ -22,7 +22,7 @@ export default function Hero() {
 
             {/* Content */}
 
-            <div className="hero-container">
+            <div className="container hero-container">
 
                 <div className="hero-left">
 

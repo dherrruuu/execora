@@ -8,7 +8,7 @@ export default function About() {
     className="about"
     >
 
-      <div className="about-container">
+      <div className="container about-container">
 
         {/* Left */}
 

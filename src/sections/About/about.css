@@ -59,10 +59,6 @@
 
 .about-container{
 
-    max-width:1450px;
-
-    margin:auto;
-
     display:grid;
 
     grid-template-columns:1fr 1fr;
