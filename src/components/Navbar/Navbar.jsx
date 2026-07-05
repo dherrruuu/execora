@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Menu, X } from "lucide-react";
 
 import navLinks from "./navbarData";
 import "./navbar.css";
@@ -7,6 +7,7 @@ import "./navbar.css";
 export default function Navbar() {
 
     const [scrolled, setScrolled] = useState(false);
+    const [menuOpen, setMenuOpen] = useState(false);
 
     useEffect(() => {
 
