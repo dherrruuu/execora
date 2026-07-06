@@ -28,7 +28,7 @@ export default function Hero() {
 
                     <span className="hero-tag">
 
-                        EXECORA • LUXURY INTERIOR STUDIO
+                        
 
                     </span>
 
