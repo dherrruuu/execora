@@ -5,75 +5,15 @@
 .clients{
 
     position:relative;
-
+    width:100%;
     overflow:hidden;
-
     padding:180px 0;
 
-    background:#0b0b0b;
-
 }
-
-/* ==========================================================
-   BACKGROUND GLOW
-========================================================== */
-
-.clients::before{
-
-    content:"";
-
-    position:absolute;
-
-    left:-240px;
-    top:-220px;
-
-    width:650px;
-    height:650px;
-
-    border-radius:50%;
-
-    background:radial-gradient(
-        circle,
-        rgba(201,169,110,.08),
-        transparent 70%
-    );
-
-    pointer-events:none;
-
-}
-
-.clients::after{
-
-    content:"";
-
-    position:absolute;
-
-    right:-180px;
-    bottom:-180px;
-
-    width:450px;
-    height:450px;
-
-    border-radius:50%;
-
-    background:radial-gradient(
-        circle,
-        rgba(255,255,255,.03),
-        transparent 70%
-    );
-
-    pointer-events:none;
-
-}
-
-/* ==========================================================
-   CONTAINER
-========================================================== */
 
 .clients-container{
 
     position:relative;
-
     z-index:2;
 
 }
@@ -85,7 +25,6 @@
 .clients-header{
 
     text-align:center;
-
     margin-bottom:90px;
 
 }
@@ -93,9 +32,7 @@
 .clients-header span{
 
     display:inline-flex;
-
     align-items:center;
-
     gap:12px;
 
     color:#C9A96E;
@@ -141,9 +78,9 @@
 
 .clients-marquee{
 
-    overflow:hidden;
-
     position:relative;
+    overflow:hidden;
+    width:100%;
 
 }
 
@@ -155,15 +92,9 @@
 
     width:max-content;
 
-    animation:scroll 70s linear infinite;
+    animation:clientsScroll 70s linear infinite;
 
     will-change:transform;
-
-}
-
-.clients-track:hover{
-
-    animation-play-state:paused;
 
 }
 
@@ -173,21 +104,19 @@
 
 .client-card{
 
+    flex:0 0 auto;
+
+    width:150px;
+
     display:flex;
 
     flex-direction:column;
 
     align-items:center;
 
-    justify-content:center;
-
-    min-width:150px;
+    text-align:center;
 
 }
-
-/* ==========================================================
-   LOGO BOX
-========================================================== */
 
 .client-logo-box{
 
@@ -200,75 +129,57 @@
 
     align-items:center;
 
-    padding:18px;
+    padding:16px;
 
     border-radius:24px;
 
-    background:rgba(255,255,255,.05);
+    background:#FAF8F4;
 
-    backdrop-filter:blur(18px);
-
-    border:1px solid rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.9);
 
     box-shadow:
+        0 15px 35px rgba(0,0,0,.20);
 
-        0 20px 45px rgba(0,0,0,.30);
-
-    transition:.4s;
+    transition:.35s ease;
 
 }
 
 .client-card:hover .client-logo-box{
 
-    transform:translateY(-8px);
-
-    border-color:rgba(201,169,110,.45);
+    transform:translateY(-8px) scale(1.04);
 
     box-shadow:
-
-        0 35px 70px rgba(0,0,0,.45);
+        0 25px 60px rgba(0,0,0,.35),
+        0 0 25px rgba(201,169,110,.18);
 
 }
 
-/* ==========================================================
-   IMAGE
-========================================================== */
-
 .client-logo-box img{
 
-    max-width:90%;
-
-    max-height:90%;
+    width:100%;
+    height:100%;
 
     object-fit:contain;
 
     display:block;
 
-    filter:brightness(1);
-
 }
-
-/* ==========================================================
-   NAME
-========================================================== */
 
 .client-name{
 
     margin-top:16px;
 
-    color:#888;
+    color:#8f8f8f;
 
-    font-size:.82rem;
+    font-size:.78rem;
 
-    letter-spacing:.15em;
+    letter-spacing:.12em;
+
+    line-height:1.5;
 
     text-transform:uppercase;
 
 }
-
-/* ==========================================================
-   FALLBACK
-========================================================== */
 
 .client-fallback{
 
@@ -284,7 +195,7 @@
    ANIMATION
 ========================================================== */
 
-@keyframes scroll{
+@keyframes clientsScroll{
 
     from{
 
@@ -308,27 +219,33 @@
 
 .clients{
 
-padding:140px 0;
+    padding:140px 0;
 
 }
 
 .clients-header{
 
-margin-bottom:70px;
-
-}
-
-.client-logo-box{
-
-width:100px;
-
-height:100px;
+    margin-bottom:70px;
 
 }
 
 .clients-track{
 
-gap:45px;
+    gap:45px;
+
+}
+
+.client-logo-box{
+
+    width:100px;
+
+    height:100px;
+
+}
+
+.client-card{
+
+    width:130px;
 
 }
 
@@ -342,53 +259,53 @@ gap:45px;
 
 .clients{
 
-padding:100px 0;
-
-}
-
-.clients-header h2{
-
-font-size:2.7rem;
+    padding:100px 0;
 
 }
 
 .clients-header{
 
-margin-bottom:55px;
+    margin-bottom:55px;
+
+}
+
+.clients-header h2{
+
+    font-size:2.7rem;
 
 }
 
 .clients-track{
 
-gap:35px;
+    gap:32px;
 
-animation-duration:45s;
+    animation-duration:45s;
 
 }
 
 .client-card{
 
-min-width:110px;
+    width:100px;
 
 }
 
 .client-logo-box{
 
-width:82px;
+    width:82px;
 
-height:82px;
+    height:82px;
 
-padding:12px;
+    padding:12px;
 
-border-radius:18px;
+    border-radius:18px;
 
 }
 
 .client-name{
 
-font-size:.68rem;
+    margin-top:10px;
 
-margin-top:10px;
+    font-size:.65rem;
 
 }
 
@@ -402,29 +319,35 @@ margin-top:10px;
 
 .clients-header h2{
 
-font-size:2.2rem;
-
-}
-
-.client-logo-box{
-
-width:72px;
-
-height:72px;
-
-padding:10px;
+    font-size:2.2rem;
 
 }
 
 .clients-track{
 
-gap:28px;
+    gap:24px;
+
+}
+
+.client-card{
+
+    width:90px;
+
+}
+
+.client-logo-box{
+
+    width:72px;
+
+    height:72px;
+
+    padding:10px;
 
 }
 
 .client-name{
 
-font-size:.62rem;
+    font-size:.58rem;
 
 }
 

@@ -1,0 +1,79 @@
+/* ==========================================================
+   GLOBAL BACKGROUND
+========================================================== */
+
+html,
+body{
+    background:#090909;
+    overflow-x:hidden;
+}
+
+body{
+
+    position:relative;
+
+    isolation:isolate;
+
+}
+
+/* Large ambient glows */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:-30%;
+
+    z-index:-2;
+
+    pointer-events:none;
+
+    background:
+
+        radial-gradient(
+            900px 900px at 15% 10%,
+            rgba(201,169,110,.08),
+            transparent 70%
+        ),
+
+        radial-gradient(
+            1000px 1000px at 90% 20%,
+            rgba(255,255,255,.025),
+            transparent 75%
+        ),
+
+        radial-gradient(
+            1100px 1100px at 70% 90%,
+            rgba(201,169,110,.05),
+            transparent 75%
+        ),
+
+        #090909;
+
+}
+
+/* Very subtle grain */
+
+body::after{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:-1;
+
+    pointer-events:none;
+
+    opacity:.03;
+
+    background-image:
+
+        radial-gradient(circle, white 1px, transparent 1px);
+
+    background-size:8px 8px;
+
+}

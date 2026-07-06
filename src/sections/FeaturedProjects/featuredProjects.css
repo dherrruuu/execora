@@ -8,31 +8,7 @@
 
     padding:180px 8vw;
 
-    background:#080808;
-
     overflow:hidden;
-
-}
-
-.featured-projects::before{
-
-    content:"";
-
-    position:absolute;
-
-    left:-220px;
-    bottom:-220px;
-
-    width:600px;
-    height:600px;
-
-    border-radius:50%;
-
-    background:radial-gradient(circle,
-        rgba(201,169,110,.08),
-        transparent 70%);
-
-    pointer-events:none;
 
 }
 

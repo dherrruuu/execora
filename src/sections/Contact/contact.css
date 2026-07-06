@@ -8,31 +8,7 @@
 
     padding:180px 8vw;
 
-    background:#080808;
-
     overflow:hidden;
-
-}
-
-.contact::before{
-
-    content:"";
-
-    position:absolute;
-
-    top:-300px;
-    right:-300px;
-
-    width:700px;
-    height:700px;
-
-    border-radius:50%;
-
-    background:radial-gradient(circle,
-        rgba(201,169,110,.08),
-        transparent 70%);
-
-    pointer-events:none;
 
 }
 

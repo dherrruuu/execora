@@ -6,62 +6,11 @@
 
     position: relative;
     overflow: hidden;
-    background: #0b0b0b;
     padding: 180px 0;
 
 }
 
-/* ==========================================================
-   BACKGROUND EFFECTS
-========================================================== */
 
-.about::before {
-
-    content: "";
-
-    position: absolute;
-
-    width: 520px;
-    height: 520px;
-
-    left: -220px;
-    top: -220px;
-
-    border-radius: 50%;
-
-    background: radial-gradient(
-        circle,
-        rgba(201,169,110,.08),
-        transparent 70%
-    );
-
-    pointer-events: none;
-
-}
-
-.about::after {
-
-    content: "";
-
-    position: absolute;
-
-    width: 420px;
-    height: 420px;
-
-    right: -180px;
-    bottom: -180px;
-
-    border-radius: 50%;
-
-    background: radial-gradient(
-        circle,
-        rgba(255,255,255,.03),
-        transparent 70%
-    );
-
-    pointer-events: none;
-
-}
 
 /* ==========================================================
    CONTAINER

@@ -4,24 +4,11 @@
 
 .services{
     padding:180px 7vw;
-    background:#0b0b0b;
     position:relative;
     overflow:hidden;
 }
 
-.services::before{
-    content:"";
-    position:absolute;
-    width:700px;
-    height:700px;
-    right:-250px;
-    top:-250px;
-    border-radius:50%;
-    background:radial-gradient(circle,
-        rgba(201,169,110,.08),
-        transparent 70%);
-    pointer-events:none;
-}
+
 
 .services-container{
     max-width:1450px;
