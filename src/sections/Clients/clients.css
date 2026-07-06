@@ -1,106 +1,431 @@
-.clients {
-    padding: 80px 40px;
-    background: #0b0b0b;
-    color: #fff;
-    overflow: hidden;
+/* ==========================================================
+   CLIENTS
+========================================================== */
+
+.clients{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:180px 0;
+
+    background:#0b0b0b;
+
 }
 
-/* Header */
-.clients-header {
-    text-align: center;
-    margin-bottom: 60px;
+/* ==========================================================
+   BACKGROUND GLOW
+========================================================== */
+
+.clients::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:-240px;
+    top:-220px;
+
+    width:650px;
+    height:650px;
+
+    border-radius:50%;
+
+    background:radial-gradient(
+        circle,
+        rgba(201,169,110,.08),
+        transparent 70%
+    );
+
+    pointer-events:none;
+
 }
 
-.clients-header span {
-    font-size: 12px;
-    letter-spacing: 2px;
-    color: #888;
+.clients::after{
+
+    content:"";
+
+    position:absolute;
+
+    right:-180px;
+    bottom:-180px;
+
+    width:450px;
+    height:450px;
+
+    border-radius:50%;
+
+    background:radial-gradient(
+        circle,
+        rgba(255,255,255,.03),
+        transparent 70%
+    );
+
+    pointer-events:none;
+
 }
 
-.clients-header h2 {
-    font-size: 42px;
-    margin-top: 10px;
+/* ==========================================================
+   CONTAINER
+========================================================== */
+
+.clients-container{
+
+    position:relative;
+
+    z-index:2;
+
 }
 
-/* MARQUEE WRAPPER */
-.clients-marquee {
-    overflow: hidden;
-    position: relative;
+/* ==========================================================
+   HEADER
+========================================================== */
+
+.clients-header{
+
+    text-align:center;
+
+    margin-bottom:90px;
+
 }
 
-/* TRACK (IMPORTANT FOR SMOOTH LOOP) */
-.clients-track {
-    display: flex;
-    gap: 50px;
-    width: max-content;
+.clients-header span{
 
-    animation: scroll 75s linear infinite;
-    will-change: transform;
-    transform: translateZ(0);
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    color:#C9A96E;
+
+    text-transform:uppercase;
+
+    letter-spacing:.45em;
+
+    font-size:.82rem;
+
 }
 
-/* CLIENT CARD */
-.client-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-width: 140px;
+.clients-header span::before{
+
+    content:"";
+
+    width:8px;
+    height:8px;
+
+    border-radius:50%;
+
+    background:#C9A96E;
+
 }
 
-/* LOGO BOX (FIX BLACK LOGOS) */
-.client-logo-box {
-    width: 110px;
-    height: 110px;
+.clients-header h2{
 
-    background: #ffffff; /* FIXES BLACK LOGOS */
-    border-radius: 14px;
+    margin-top:30px;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    color:#fff;
 
-    padding: 14px;
+    font-size:clamp(3rem,6vw,5.8rem);
 
-    box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+    font-weight:500;
 
-    transition: transform 0.3s ease;
+    letter-spacing:-.05em;
+
 }
 
-/* IMAGE */
-.client-logo-box img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
+/* ==========================================================
+   MARQUEE
+========================================================== */
 
-    display: block;
+.clients-marquee{
+
+    overflow:hidden;
+
+    position:relative;
+
 }
 
-/* HOVER */
-.client-card:hover .client-logo-box {
-    transform: scale(1.08);
+.clients-track{
+
+    display:flex;
+
+    gap:60px;
+
+    width:max-content;
+
+    animation:scroll 70s linear infinite;
+
+    will-change:transform;
+
 }
 
-/* NAME */
-.client-name {
-    margin-top: 10px;
-    font-size: 13px;
-    color: #aaa;
-    text-align: center;
+.clients-track:hover{
+
+    animation-play-state:paused;
+
 }
 
-/* FALLBACK */
-.client-fallback {
-    font-size: 26px;
-    font-weight: bold;
-    color: #333;
+/* ==========================================================
+   CLIENT CARD
+========================================================== */
+
+.client-card{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    min-width:150px;
+
 }
 
-/* 🔥 SMOOTH INFINITE LOOP */
-@keyframes scroll {
-    0% {
-        transform: translateX(0);
+/* ==========================================================
+   LOGO BOX
+========================================================== */
+
+.client-logo-box{
+
+    width:120px;
+    height:120px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:18px;
+
+    border-radius:24px;
+
+    background:rgba(255,255,255,.05);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    box-shadow:
+
+        0 20px 45px rgba(0,0,0,.30);
+
+    transition:.4s;
+
+}
+
+.client-card:hover .client-logo-box{
+
+    transform:translateY(-8px);
+
+    border-color:rgba(201,169,110,.45);
+
+    box-shadow:
+
+        0 35px 70px rgba(0,0,0,.45);
+
+}
+
+/* ==========================================================
+   IMAGE
+========================================================== */
+
+.client-logo-box img{
+
+    max-width:90%;
+
+    max-height:90%;
+
+    object-fit:contain;
+
+    display:block;
+
+    filter:brightness(1);
+
+}
+
+/* ==========================================================
+   NAME
+========================================================== */
+
+.client-name{
+
+    margin-top:16px;
+
+    color:#888;
+
+    font-size:.82rem;
+
+    letter-spacing:.15em;
+
+    text-transform:uppercase;
+
+}
+
+/* ==========================================================
+   FALLBACK
+========================================================== */
+
+.client-fallback{
+
+    font-size:2rem;
+
+    font-weight:700;
+
+    color:#C9A96E;
+
+}
+
+/* ==========================================================
+   ANIMATION
+========================================================== */
+
+@keyframes scroll{
+
+    from{
+
+        transform:translateX(0);
+
     }
-    100% {
-        transform: translateX(-50%);
+
+    to{
+
+        transform:translateX(-50%);
+
     }
+
+}
+
+/* ==========================================================
+   TABLET
+========================================================== */
+
+@media(max-width:992px){
+
+.clients{
+
+padding:140px 0;
+
+}
+
+.clients-header{
+
+margin-bottom:70px;
+
+}
+
+.client-logo-box{
+
+width:100px;
+
+height:100px;
+
+}
+
+.clients-track{
+
+gap:45px;
+
+}
+
+}
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media(max-width:768px){
+
+.clients{
+
+padding:100px 0;
+
+}
+
+.clients-header h2{
+
+font-size:2.7rem;
+
+}
+
+.clients-header{
+
+margin-bottom:55px;
+
+}
+
+.clients-track{
+
+gap:35px;
+
+animation-duration:45s;
+
+}
+
+.client-card{
+
+min-width:110px;
+
+}
+
+.client-logo-box{
+
+width:82px;
+
+height:82px;
+
+padding:12px;
+
+border-radius:18px;
+
+}
+
+.client-name{
+
+font-size:.68rem;
+
+margin-top:10px;
+
+}
+
+}
+
+/* ==========================================================
+   SMALL PHONES
+========================================================== */
+
+@media(max-width:480px){
+
+.clients-header h2{
+
+font-size:2.2rem;
+
+}
+
+.client-logo-box{
+
+width:72px;
+
+height:72px;
+
+padding:10px;
+
+}
+
+.clients-track{
+
+gap:28px;
+
+}
+
+.client-name{
+
+font-size:.62rem;
+
+}
+
 }
