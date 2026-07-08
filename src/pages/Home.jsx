@@ -32,6 +32,23 @@ export default function Home() {
 
         });
 
+        if (window.location.hash) {
+
+            const sectionId = window.location.hash.slice(1);
+            const section = document.getElementById(sectionId);
+
+            if (section) {
+
+                requestAnimationFrame(() => {
+
+                    section.scrollIntoView({ behavior: "smooth", block: "start" });
+
+                });
+
+            }
+
+        }
+
     }, []);
 
     return (

@@ -68,11 +68,11 @@ export default function Project() {
 
         <main className="project-page">
 
-            <Link to="/" className="project-back-link">
+            <Link to="/#projects" className="project-back-link">
 
                 <ArrowLeft size={18} />
 
-                Back to Home
+                Back to Selected Works
 
             </Link>
 
