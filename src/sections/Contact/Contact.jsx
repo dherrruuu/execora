@@ -46,7 +46,12 @@ export default function Contact() {
 
                     </p>
 
-                    <button className="contact-btn">
+                    <a
+                        className="contact-btn"
+                        href={contactData.whatsappUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
 
                         {contactData.button}
 
@@ -55,7 +60,7 @@ export default function Contact() {
                             strokeWidth={1.8}
                         />
 
-                    </button>
+                    </a>
 
                 </div>
 

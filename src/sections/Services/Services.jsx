@@ -1,8 +1,67 @@
 import "./services.css";
 import services from "./servicesData";
 import { ArrowUpRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 export default function Services() {
+
+  const navigate = useNavigate();
+
+  const scrollToSection = (id) => {
+
+    const section = document.getElementById(id);
+
+    if (section) {
+
+      section.scrollIntoView({ behavior: "smooth", block: "start" });
+
+    }
+
+  };
+
+  const handleExplore = (serviceTitle) => {
+
+    switch (serviceTitle) {
+
+      case "Luxury Residential":
+
+        scrollToSection("residential");
+
+        break;
+
+      case "Commercial Spaces":
+
+        scrollToSection("commercial");
+
+        break;
+
+      case "Hospitality Design":
+
+        scrollToSection("hospitality");
+
+        break;
+
+      case "Civil & Finishing Works":
+
+        navigate("/projects/civil-work");
+
+        break;
+
+      default:
+
+        break;
+
+    }
+
+  };
+
+  const activeServices = new Set([
+    "Luxury Residential",
+    "Commercial Spaces",
+    "Hospitality Design",
+    "Civil & Finishing Works",
+  ]);
+
   return (
     <section
     id="services"
@@ -60,7 +119,13 @@ export default function Services() {
                   {service.description}
                 </p>
 
-                <button className="service-button">
+                {activeServices.has(service.title) && (
+
+                <button
+                  className="service-button"
+                  type="button"
+                  onClick={() => handleExplore(service.title)}
+                >
 
                   Explore
 
@@ -70,6 +135,8 @@ export default function Services() {
                   />
 
                 </button>
+
+                )}
 
               </div>
 

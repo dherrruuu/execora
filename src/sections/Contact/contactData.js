@@ -17,6 +17,8 @@ const contactData = {
 
     instagram: "Coming Soon!",
 
+    whatsappUrl: "https://wa.me/918209592340",
+
     button: "Let's Talk"
 
 };

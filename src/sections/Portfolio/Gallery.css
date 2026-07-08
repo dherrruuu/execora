@@ -1,0 +1,221 @@
+/* ==========================================================
+   GALLERY PAGE
+========================================================== */
+
+.gallery-page{
+    min-height:100vh;
+    background:#080808;
+    color:#fff;
+    padding:180px 8vw 120px;
+}
+
+/* ==========================================================
+HEADER
+========================================================== */
+
+.gallery-header{
+    max-width:1450px;
+    margin:auto;
+    margin-bottom:90px;
+}
+
+.gallery-category{
+    display:inline-block;
+    color:#C9A96E;
+    text-transform:uppercase;
+    letter-spacing:.35em;
+    font-size:.82rem;
+    margin-bottom:22px;
+}
+
+.gallery-title{
+    font-size:clamp(3rem,7vw,6rem);
+    line-height:.95;
+    font-weight:500;
+    letter-spacing:-.05em;
+    margin-bottom:18px;
+}
+
+.gallery-description{
+    max-width:760px;
+    color:rgba(255,255,255,.62);
+    font-size:1.05rem;
+    line-height:1.9;
+}
+
+/* ==========================================================
+GRID
+========================================================== */
+
+.gallery-grid{
+
+    column-count:3;
+    column-gap:26px;
+
+}
+
+/* ==========================================================
+IMAGE CARD
+========================================================== */
+
+.gallery-item{
+
+    break-inside:avoid;
+    margin-bottom:26px;
+
+}
+
+.gallery-item img{
+
+    width:100%;
+    display:block;
+
+    border-radius:22px;
+
+    transition:
+    transform .8s ease,
+    filter .5s ease,
+    box-shadow .5s ease;
+
+    cursor:pointer;
+
+    background:#111;
+
+}
+
+.gallery-item:hover img{
+
+    transform:scale(1.03);
+
+    box-shadow:
+    0 30px 80px rgba(0,0,0,.45);
+
+}
+
+/* ==========================================================
+BACK BUTTON
+========================================================== */
+
+.gallery-back{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-bottom:70px;
+
+    color:white;
+
+    text-decoration:none;
+
+    transition:.35s;
+
+}
+
+.gallery-back:hover{
+
+    color:#C9A96E;
+
+}
+
+/* ==========================================================
+TABLET
+========================================================== */
+
+@media(max-width:1100px){
+
+.gallery-grid{
+
+column-count:2;
+
+}
+
+}
+
+/* ==========================================================
+MOBILE
+========================================================== */
+
+@media(max-width:768px){
+
+.gallery-page{
+
+padding:120px 22px 80px;
+
+}
+
+.gallery-header{
+
+margin-bottom:55px;
+
+}
+
+.gallery-title{
+
+font-size:2.8rem;
+
+}
+
+.gallery-description{
+
+font-size:.96rem;
+
+line-height:1.8;
+
+}
+
+.gallery-grid{
+
+column-count:1;
+
+column-gap:0;
+
+}
+
+.gallery-item{
+
+margin-bottom:18px;
+
+}
+
+.gallery-item img{
+
+border-radius:18px;
+
+}
+
+}
+
+/* ==========================================================
+SMALL PHONES
+========================================================== */
+
+@media(max-width:480px){
+
+.gallery-page{
+
+padding:100px 16px 70px;
+
+}
+
+.gallery-title{
+
+font-size:2.25rem;
+
+}
+
+.gallery-description{
+
+font-size:.9rem;
+
+}
+
+.gallery-item img{
+
+border-radius:15px;
+
+}
+
+}

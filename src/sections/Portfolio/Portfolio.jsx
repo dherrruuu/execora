@@ -1,16 +1,17 @@
-import "./Portfolio.css";
-import portfolio from "./portfolioData";
-
 import { useEffect, useRef } from "react";
-
+import { Link } from "react-router-dom";
+import { ArrowUpRight } from "lucide-react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+import "./Portfolio.css";
+import portfolio from "./portfolioData";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Portfolio() {
 
-    const sectionRef = useRef(null);
+    const portfolioRef = useRef(null);
 
     useEffect(() => {
 
@@ -18,73 +19,39 @@ export default function Portfolio() {
 
             gsap.utils.toArray(".portfolio-card").forEach((card) => {
 
-                const slats = card.querySelectorAll(".slat");
-                const image = card.querySelector(".portfolio-image img");
-                const info = card.querySelector(".portfolio-info");
-
-                const tl = gsap.timeline({
-
-                    scrollTrigger:{
-                        trigger:card,
-                        start:"top 82%",
-                        once:true
+                gsap.fromTo(
+                    card,
+                    {
+                        opacity: 0,
+                        y: 40
+                    },
+                    {
+                        opacity: 1,
+                        y: 0,
+                        ease: "none",
+                        scrollTrigger: {
+                            trigger: card,
+                            start: "top 98%",
+                            end: "top 30%",
+                            scrub: 3
+                        }
                     }
-
-                });
-
-                tl
-
-                .to(slats,{
-
-                    yPercent:-100,
-
-                    stagger:0.08,
-
-                    duration:0.9,
-
-                    ease:"power4.inOut"
-
-                })
-
-                .to(image,{
-
-                    scale:1,
-
-                    filter:"blur(0px)",
-
-                    opacity:1,
-
-                    duration:1,
-
-                    ease:"power3.out"
-
-                },0)
-
-                .from(info,{
-
-                    y:40,
-
-                    opacity:0,
-
-                    duration:.7,
-
-                    ease:"power3.out"
-
-                },"-=0.5");
+                );
 
             });
 
-        },sectionRef);
+        }, portfolioRef);
 
-        return ()=>ctx.revert();
+        return () => ctx.revert();
 
-    },[]);
+    }, []);
 
-    return(
+    return (
 
         <section
             className="portfolio"
-            ref={sectionRef}
+            id="projects"
+            ref={portfolioRef}
         >
 
             <div className="portfolio-container">
@@ -97,98 +64,75 @@ export default function Portfolio() {
                     Selected Works
                 </h2>
 
-                {
+                {portfolio.map((section) => (
 
-                    portfolio.map((section)=>(
+                    <section
+                        key={section.category}
+                        className="portfolio-category"
+                        id={section.category.toLowerCase()}
+                    >
 
-                        <div
-                            key={section.category}
-                            className="portfolio-category"
-                        >
+                        <div className="category-header">
 
-                            <div className="category-header">
-
-                                <h3>
-
-                                    {section.category}
-
-                                </h3>
-
-                            </div>
-
-                            <div className="portfolio-grid">
-
-                                {
-
-                                    section.projects.map((project)=>(
-
-                                        <article
-                                            key={project.slug}
-                                            className="portfolio-card"
-                                        >
-
-                                            <div className="portfolio-image">
-
-                                                <img
-                                                    src={project.image}
-                                                    alt={project.title}
-                                                    loading="lazy"
-                                                />
-
-                                                <div className="slats">
-
-                                                    <span className="slat"></span>
-                                                    <span className="slat"></span>
-                                                    <span className="slat"></span>
-                                                    <span className="slat"></span>
-                                                    <span className="slat"></span>
-                                                    <span className="slat"></span>
-                                                    <span className="slat"></span>
-                                                    <span className="slat"></span>
-
-                                                </div>
-
-                                            </div>
-
-                                            <div className="portfolio-info">
-
-                                                <span className="portfolio-category-name">
-
-                                                    {section.category}
-
-                                                </span>
-
-                                                <div className="portfolio-bottom">
-
-                                                    <h4>
-
-                                                        {project.title}
-
-                                                    </h4>
-
-                                                    <div className="portfolio-arrow">
-
-                                                        ↗
-
-                                                    </div>
-
-                                                </div>
-
-                                            </div>
-
-                                        </article>
-
-                                    ))
-
-                                }
-
-                            </div>
+                            <h3>{section.category}</h3>
 
                         </div>
 
-                    ))
+                        <div className="portfolio-grid">
 
-                }
+                            {section.projects.map((project) => (
+
+                                <Link
+                                    key={project.slug}
+                                    to={`/projects/${project.slug}`}
+                                    className="portfolio-card"
+                                >
+
+                                    <div className="portfolio-image">
+
+                                        <img
+                                            src={project.image}
+                                            alt={project.title}
+                                            loading="lazy"
+                                        />
+
+                                    </div>
+
+                                    <div className="portfolio-content">
+
+                                        <span className="portfolio-category-name">
+
+                                            {section.category}
+
+                                        </span>
+
+                                        <div className="portfolio-bottom">
+
+                                            <h4>
+
+                                                {project.title}
+
+                                            </h4>
+
+                                            <div className="portfolio-arrow">
+
+                                                <ArrowUpRight size={20} />
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </Link>
+
+                            ))}
+
+                        </div>
+
+                    </section>
+
+                ))}
 
             </div>
 

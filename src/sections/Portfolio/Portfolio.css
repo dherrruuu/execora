@@ -1,5 +1,5 @@
 /* ==========================================================
-   PORTFOLIO SECTION
+PORTFOLIO
 ========================================================== */
 
 .portfolio{
@@ -8,28 +8,25 @@
 
     padding:180px 8vw;
 
+
     overflow:hidden;
 
 }
 
 
-
 .portfolio-container{
-
-    max-width:1500px;
-
-    margin:auto;
 
     position:relative;
 
     z-index:2;
 
+    max-width:1500px;
+
+    margin:auto;
+
 }
 
-
-/* ==========================================================
-HEADER
-========================================================== */
+/* ========================================================== */
 
 .portfolio-tag{
 
@@ -41,9 +38,9 @@ HEADER
 
     color:#C9A96E;
 
-    text-transform:uppercase;
-
     letter-spacing:.45em;
+
+    text-transform:uppercase;
 
     font-size:.82rem;
 
@@ -54,6 +51,7 @@ HEADER
     content:"";
 
     width:8px;
+
     height:8px;
 
     border-radius:50%;
@@ -66,7 +64,7 @@ HEADER
 
     margin-top:28px;
 
-    margin-bottom:110px;
+    margin-bottom:100px;
 
     color:#fff;
 
@@ -74,20 +72,15 @@ HEADER
 
     font-weight:500;
 
-    line-height:.9;
-
-    letter-spacing:-.05em;
+    line-height:.92;
 
 }
 
-
-/* ==========================================================
-CATEGORY
-========================================================== */
+/* ========================================================== */
 
 .portfolio-category{
 
-    margin-bottom:110px;
+    margin-bottom:120px;
 
 }
 
@@ -97,9 +90,9 @@ CATEGORY
 
     align-items:center;
 
-    gap:28px;
+    gap:30px;
 
-    margin-bottom:42px;
+    margin-bottom:45px;
 
 }
 
@@ -107,7 +100,7 @@ CATEGORY
 
     color:#fff;
 
-    font-size:2.5rem;
+    font-size:2.4rem;
 
     font-weight:500;
 
@@ -122,69 +115,65 @@ CATEGORY
     height:1px;
 
     background:
-    linear-gradient(
-    to right,
-    rgba(201,169,110,.4),
+    linear-gradient(to right,
+    rgba(201,169,110,.35),
     transparent);
 
 }
 
-
-/* ==========================================================
-GRID
-========================================================== */
+/* ========================================================== */
 
 .portfolio-grid{
 
     display:grid;
 
-    grid-template-columns:
-    repeat(auto-fit,minmax(430px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(360px,1fr));
 
-    gap:40px;
+    gap:34px;
 
 }
 
-
-/* ==========================================================
-CARD
-========================================================== */
+/* ========================================================== */
 
 .portfolio-card{
 
-    position:relative;
+    display:flex;
+
+    flex-direction:column;
 
     overflow:hidden;
 
-    border-radius:28px;
+    border-radius:26px;
 
     background:#111;
 
-    cursor:pointer;
+    text-decoration:none;
+
+    transition:.45s;
 
     box-shadow:
-    0 20px 60px rgba(0,0,0,.35);
 
-    transition:
-    transform .45s ease,
-    box-shadow .45s ease;
+    0 20px 55px rgba(0,0,0,.32);
 
 }
 
+.portfolio-card:hover{
 
-/* ==========================================================
-IMAGE
-========================================================== */
+    transform:translateY(-10px);
+
+    box-shadow:
+
+    0 35px 90px rgba(0,0,0,.45);
+
+}
+
+/* ========================================================== */
 
 .portfolio-image{
 
-    position:relative;
+    aspect-ratio:16/10;
 
     overflow:hidden;
-
-    width:100%;
-
-    aspect-ratio:16/10;
 
 }
 
@@ -196,61 +185,23 @@ IMAGE
 
     object-fit:cover;
 
-    transform:scale(1.12);
-
-    filter:blur(18px);
-
-    opacity:.35;
+    transition:1s;
 
 }
 
+.portfolio-card:hover img{
 
-/* ==========================================================
-LUXURY SLATS
-========================================================== */
-
-.slats{
-
-    position:absolute;
-
-    inset:0;
-
-    display:grid;
-
-    grid-template-columns:repeat(8,1fr);
-
-    pointer-events:none;
-
-    z-index:5;
+    transform:scale(1.05);
 
 }
 
-.slat{
+/* ========================================================== */
 
-    background:#080808;
+.portfolio-content{
 
-    border-right:1px solid rgba(255,255,255,.04);
-
-}
-
-.slat:last-child{
-
-    border-right:none;
-
-}
-
-
-/* ==========================================================
-INFO PANEL
-========================================================== */
-
-.portfolio-info{
+    padding:24px;
 
     background:#101010;
-
-    padding:26px 30px;
-
-    border-top:1px solid rgba(255,255,255,.06);
 
 }
 
@@ -266,7 +217,7 @@ INFO PANEL
 
     text-transform:uppercase;
 
-    margin-bottom:14px;
+    margin-bottom:16px;
 
 }
 
@@ -276,7 +227,7 @@ INFO PANEL
 
     justify-content:space-between;
 
-    align-items:flex-end;
+    align-items:center;
 
     gap:20px;
 
@@ -284,400 +235,175 @@ INFO PANEL
 
 .portfolio-bottom h4{
 
-    color:white;
+    color:#fff;
 
-    font-size:1.65rem;
+    font-size:1.45rem;
 
     font-weight:500;
-
-    line-height:1.15;
-
-}
-
-.portfolio-arrow{
-
-    width:54px;
-
-    height:54px;
-
-    display:grid;
-
-    place-items:center;
-
-    border-radius:50%;
-
-    font-size:1.3rem;
-
-    color:white;
-
-    background:
-
-    rgba(255,255,255,.06);
-
-    border:1px solid
-
-    rgba(255,255,255,.08);
-
-    transition:.45s;
-
-}
-
-
-/* ==========================================================
-HOVER
-========================================================== */
-
-.portfolio-card:hover{
-
-    transform:translateY(-12px);
-
-    box-shadow:
-
-    0 35px 90px rgba(0,0,0,.45);
-
-}
-
-.portfolio-card:hover img{
-
-    transform:scale(1.05);
-
-}
-
-.portfolio-card:hover .portfolio-arrow{
-
-    transform:
-
-    rotate(45deg);
-
-    background:#C9A96E;
-
-    color:#111;
-
-}
-
-.portfolio-card:hover .portfolio-info{
-
-    background:#141414;
-
-}
-/* ==========================================================
-TABLETS
-========================================================== */
-
-@media (max-width:1200px){
-
-.portfolio{
-
-    padding:150px 5vw;
-
-}
-
-.portfolio-grid{
-
-    grid-template-columns:
-    repeat(2,minmax(0,1fr));
-
-    gap:32px;
-
-}
-
-.portfolio-bottom h4{
-
-    font-size:1.45rem;
-
-}
-
-.portfolio-info{
-
-    padding:22px 24px;
-
-}
-
-}
-
-
-/* ==========================================================
-SMALL TABLETS
-========================================================== */
-
-@media (max-width:992px){
-
-.portfolio{
-
-    padding:130px 26px;
-
-}
-
-.portfolio h2{
-
-    margin-bottom:70px;
-
-}
-
-.portfolio-category{
-
-    margin-bottom:80px;
-
-}
-
-.category-header{
-
-    margin-bottom:28px;
-
-}
-
-.category-header h3{
-
-    font-size:2rem;
-
-}
-
-.portfolio-grid{
-
-    grid-template-columns:1fr;
-
-    gap:28px;
-
-}
-
-.portfolio-card{
-
-    border-radius:24px;
-
-}
-
-.portfolio-image{
-
-    aspect-ratio:16/10;
-
-}
-
-.portfolio-info{
-
-    padding:22px;
-
-}
-
-.portfolio-bottom h4{
-
-    font-size:1.45rem;
-
-}
-
-.portfolio-arrow{
-
-    width:48px;
-
-    height:48px;
-
-    font-size:1.1rem;
-
-}
-
-}
-
-
-/* ==========================================================
-MOBILE
-========================================================== */
-
-@media (max-width:768px){
-
-.portfolio{
-
-    padding:100px 18px;
-
-}
-
-.portfolio-tag{
-
-    font-size:.72rem;
-
-    letter-spacing:.32em;
-
-}
-
-.portfolio h2{
-
-    font-size:2.8rem;
-
-    margin-bottom:55px;
-
-}
-
-.category-header{
-
-    margin-bottom:24px;
-
-    gap:18px;
-
-}
-
-.category-header h3{
-
-    font-size:1.65rem;
-
-}
-
-.portfolio-category{
-
-    margin-bottom:60px;
-
-}
-
-.portfolio-grid{
-
-    gap:22px;
-
-}
-
-.portfolio-card{
-
-    border-radius:22px;
-
-}
-
-.portfolio-image{
-
-    aspect-ratio:4/3;
-
-}
-
-.portfolio-info{
-
-    padding:18px;
-
-}
-
-.portfolio-category-name{
-
-    font-size:.62rem;
-
-    letter-spacing:.28em;
-
-    margin-bottom:10px;
-
-}
-
-.portfolio-bottom{
-
-    gap:14px;
-
-}
-
-.portfolio-bottom h4{
-
-    font-size:1.2rem;
 
     line-height:1.25;
 
 }
 
+/* ========================================================== */
+
 .portfolio-arrow{
 
-    width:42px;
+    width:52px;
 
-    height:42px;
+    height:52px;
 
-    font-size:1rem;
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    color:white;
+
+    transition:.35s;
+
+    flex-shrink:0;
 
 }
 
+.portfolio-card:hover .portfolio-arrow{
+
+    background:#C9A96E;
+
+    color:#111;
+
+    transform:rotate(45deg);
+
 }
 
+/* ========================================================== */
 
-/* ==========================================================
-SMALL PHONES
-========================================================== */
-
-@media (max-width:480px){
+@media(max-width:992px){
 
 .portfolio{
 
-    padding:90px 16px;
+padding:140px 28px;
 
 }
 
-.portfolio h2{
+.portfolio-grid{
 
-    font-size:2.2rem;
+grid-template-columns:1fr;
+
+gap:28px;
 
 }
 
 .category-header h3{
 
-    font-size:1.45rem;
+font-size:2rem;
 
 }
 
-.portfolio-grid{
+}
 
-    gap:18px;
+/* ========================================================== */
+
+@media(max-width:768px){
+
+.portfolio{
+
+padding:100px 20px;
 
 }
 
-.portfolio-card{
+.portfolio h2{
 
-    border-radius:20px;
+font-size:2.9rem;
 
-}
-
-.portfolio-image{
-
-    aspect-ratio:5/4;
+margin-bottom:70px;
 
 }
 
-.portfolio-info{
+.portfolio-category{
 
-    padding:16px;
+margin-bottom:80px;
+
+}
+
+.category-header{
+
+margin-bottom:26px;
+
+}
+
+.category-header h3{
+
+font-size:1.75rem;
+
+}
+
+.portfolio-content{
+
+padding:18px;
 
 }
 
 .portfolio-category-name{
 
-    font-size:.58rem;
+font-size:.65rem;
 
 }
 
 .portfolio-bottom h4{
 
-    font-size:1.05rem;
+font-size:1.15rem;
 
 }
 
 .portfolio-arrow{
 
-    width:38px;
+width:44px;
 
-    height:38px;
-
-}
+height:44px;
 
 }
 
+}
 
-/* ==========================================================
-LARGE DESKTOP
-========================================================== */
+/* ========================================================== */
 
-@media (min-width:1700px){
+@media(max-width:480px){
 
-.portfolio-container{
+.portfolio{
 
-    max-width:1700px;
+padding:90px 16px;
+
+}
+
+.portfolio h2{
+
+font-size:2.3rem;
 
 }
 
 .portfolio-grid{
 
-    gap:50px;
+gap:20px;
 
 }
 
-.portfolio-bottom h4{
+.portfolio-card{
 
-    font-size:1.9rem;
+border-radius:20px;
+
+}
+
+.portfolio-image{
+
+aspect-ratio:4/3;
 
 }
 

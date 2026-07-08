@@ -13,16 +13,16 @@ const heroData = {
 
   primaryButton: "Explore Projects",
 
-  secondaryButton: "Book Consultation",
+  secondaryButton: "Let's Talk",
 
   stats: [
     {
-      number: "150+",
-      label: "Projects"
+      number: "225+",
+      label: "Projects Delivered"
     },
     {
-      number: "12+",
-      label: "Years"
+      number: "25+",
+      label: "Years Experience"
     },
     {
       number: "98%",

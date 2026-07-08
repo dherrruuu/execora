@@ -1,7 +1,19 @@
-import { ArrowRight, Play } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import "./hero.css";
 
 export default function Hero() {
+
+    const scrollToSection = (id) => {
+
+        const section = document.getElementById(id);
+
+        if (section) {
+
+            section.scrollIntoView({ behavior: "smooth", block: "start" });
+
+        }
+
+    };
 
     return (
 
@@ -53,7 +65,11 @@ export default function Hero() {
 
                     <div className="hero-buttons">
 
-                        <button className="btn-primary">
+                        <button
+                            type="button"
+                            className="btn-primary"
+                            onClick={() => scrollToSection("projects")}
+                        >
 
                             Explore Projects
 
@@ -61,18 +77,17 @@ export default function Hero() {
 
                         </button>
 
-                        <a
+                        <button
+                            type="button"
                             className="watch-btn"
-                            href="https://drive.google.com/file/d/18PFbcvliWeGOKvuOIDE9QlUfxQCMCB_z/view?usp=sharing"
-                            target="_blank"
-                            rel="noopener noreferrer"
+                            onClick={() => scrollToSection("contact")}
                         >
 
-                            <Play size={18} />
+                            <ArrowRight size={18} />
 
-                            Watch Walkthrough
+                            Let&apos;s Talk
 
-                        </a>
+                        </button>
 
                     </div>
 
@@ -84,7 +99,7 @@ export default function Hero() {
 
                         <div className="stat">
 
-                            <h2>150+</h2>
+                            <h2>225+</h2>
 
                             <span>Projects Delivered</span>
 
@@ -94,7 +109,7 @@ export default function Hero() {
 
                         <div className="stat">
 
-                            <h2>12+</h2>
+                            <h2>25+</h2>
 
                             <span>Years Experience</span>
 
