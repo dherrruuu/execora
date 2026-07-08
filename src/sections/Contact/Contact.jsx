@@ -128,6 +128,28 @@ export default function Contact() {
 
             </div>
 
+            <div className="contact-endline">
+
+                <span className="contact-endline-rule"></span>
+
+                <div className="contact-endline-copy">
+
+                    <a href="#home" className="contact-endline-brand">
+                        BWD
+                    </a>
+
+                    <span className="contact-endline-message">
+                        Thank you for visiting our portfolio.
+                    </span>
+
+                    <span className="contact-endline-text">
+                        All rights reserved.
+                    </span>
+
+                </div>
+
+            </div>
+
         </section>
 
     );

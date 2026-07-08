@@ -81,7 +81,7 @@ export default function About() {
 
           <img
             src="/about.jpg"
-            alt="Execora Interior"
+            alt="BWD Interior"
             className="about-image"
           />
 

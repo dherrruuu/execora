@@ -49,8 +49,17 @@ export default function Navbar() {
                 <div
                     className="navbar-logo"
                     onClick={() => scrollToSection("home")}
+                    role="button"
+                    tabIndex={0}
+                    onKeyDown={(event) => {
+                        if (event.key === "Enter" || event.key === " ") {
+                            scrollToSection("home");
+                        }
+                    }}
                 >
-                    EXECORA
+                    <span className="brand-letter">B</span>
+                    <span className="brand-letter">W</span>
+                    <span className="brand-letter">D</span>
                 </div>
 
                 <nav>

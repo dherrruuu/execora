@@ -2,13 +2,13 @@ const aboutData = {
   tag: "WHO WE ARE",
 
   title: [
-    "Crafting",
-    "spaces that",
-    "feel timeless."
+    "BWD was founded",
+    "by Mr. Munnilal",
+    "Suthar in 1996."
   ],
 
   description:
-    "Execora designs refined residential, commercial and hospitality interiors where architecture, craftsmanship and thoughtful detailing come together to create spaces that leave a lasting impression.",
+    "Since 1996, BWD has shaped refined residential, commercial and hospitality interiors with a focus on thoughtful planning, careful craftsmanship and finishes that stand the test of time.",
 
   stats: [
     {

@@ -10,7 +10,7 @@ export default function Clients() {
         <section id="clients" className="clients">
 
             <div className="clients-header">
-                <span>Selected Clients</span>
+                <span>Worked With / Worked For</span>
                 <h2>Businesses We’ve Worked With</h2>
             </div>
 
