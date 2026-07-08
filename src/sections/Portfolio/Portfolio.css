@@ -5,23 +5,9 @@
 .portfolio{
     position:relative;
     padding:180px 8vw;
-    background:#080808;
     overflow:hidden;
 }
 
-.portfolio::before{
-    content:"";
-    position:absolute;
-    top:-250px;
-    right:-250px;
-    width:700px;
-    height:700px;
-    border-radius:50%;
-    background:radial-gradient(circle,
-        rgba(201,169,110,.08),
-        transparent 70%);
-    pointer-events:none;
-}
 
 .portfolio-container{
     position:relative;
