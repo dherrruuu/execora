@@ -2,7 +2,7 @@ import {
     Hero,
     About,
     Services,
-    FeaturedProjects,
+    Portfolio,
     Clients,
     Contact
 } from "../sections";
@@ -13,7 +13,7 @@ export default function Home() {
             <Hero />
             <About />
             <Services />
-            <FeaturedProjects />
+            <Portfolio />
             <Clients />
             <Contact />
         </>
