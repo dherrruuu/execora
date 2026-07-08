@@ -96,37 +96,44 @@ export default function Navbar() {
 
             {menuOpen && (
 
-                <div className="mobile-menu">
+                <div
+                    className="mobile-menu-backdrop"
+                    onClick={() => setMenuOpen(false)}
+                >
 
-                    {navLinks.map((link) => (
+                    <div className="mobile-menu">
 
-                        <button
-                            key={link.id}
-                            onClick={() => {
+                        {navLinks.map((link) => (
 
-                                scrollToSection(link.section);
+                            <button
+                                key={link.id}
+                                onClick={() => {
 
-                                setMenuOpen(false);
+                                    scrollToSection(link.section);
 
-                            }}
+                                    setMenuOpen(false);
+
+                                }}
+                            >
+
+                                {link.title}
+
+                            </button>
+
+                        ))}
+
+                        <a
+                            className="mobile-talk-btn"
+                            href="https://wa.me/918209592340"
+                            target="_blank"
+                            rel="noopener noreferrer"
                         >
 
-                            {link.title}
+                            Let's Talk
 
-                        </button>
+                        </a>
 
-                    ))}
-
-                    <a
-                        className="mobile-talk-btn"
-                        href="https://wa.me/918209592340"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-
-                        Let's Talk
-
-                    </a>
+                    </div>
 
                 </div>
 
