@@ -1,4 +1,4 @@
-import "./portfolio.css";
+import "./Portfolio.css";
 import portfolio from "./portfolioData";
 
 export default function Portfolio() {
