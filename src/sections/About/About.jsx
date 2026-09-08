@@ -1,11 +1,18 @@
+import { useRef } from "react";
+
 import aboutData from "./aboutData";
+import useFadeUp from "../../hooks/useFadeUp";
 import "./about.css";
 
 export default function About() {
+  const aboutRef = useRef(null);
+
+  useFadeUp(aboutRef);
   return (
     <section
     id="about"
     className="about"
+    ref={aboutRef}
     >
 
       <div className="container about-container">
@@ -14,7 +21,7 @@ export default function About() {
 
         <div className="about-content">
 
-          <span className="about-tag">
+          <span className="about-tag fade-up">
 
             <span className="about-dot"></span>
 
@@ -22,7 +29,7 @@ export default function About() {
 
           </span>
 
-          <h2 className="about-title">
+          <h2 className="about-title fade-up">
 
             {aboutData.title.map((line) => (
 
@@ -36,15 +43,15 @@ export default function About() {
 
           </h2>
 
-          <p className="about-description">
+          <p className="about-description fade-up">
 
             {aboutData.description}
 
           </p>
 
-          <div className="about-divider"></div>
+          <div className="about-divider fade-up"></div>
 
-          <div className="about-stats">
+          <div className="about-stats fade-up">
 
             {aboutData.stats.map((item) => (
 
@@ -75,7 +82,7 @@ export default function About() {
 
         {/* Right */}
 
-        <div className="about-image-wrapper">
+        <div className="about-image-wrapper fade-up">
 
           <div className="about-image-bg"></div>
 

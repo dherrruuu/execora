@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 
-import Cursor from "./components/Cursor/Cursor";
+import SmoothScroll from "./components/SmoothScroll/SmoothScroll";
 
 import MainLayout from "./layouts/MainLayout";
 
@@ -8,37 +8,31 @@ import Home from "./pages/Home";
 import Project from "./pages/Project";
 
 export default function App() {
+    return (
+        <>
+            <SmoothScroll />
 
-  return (
+            <Routes>
 
-    <>
+                {/* Homepage */}
 
-      <Cursor />
+                <Route element={<MainLayout />}>
 
-      <Routes>
+                    <Route
+                        path="/"
+                        element={<Home />}
+                    />
 
-        {/* Homepage */}
+                </Route>
 
-        <Route element={<MainLayout />}>
+                {/* Project Page */}
 
-          <Route
-            path="/"
-            element={<Home />}
-          />
+                <Route
+                    path="/projects/:slug"
+                    element={<Project />}
+                />
 
-        </Route>
-
-        {/* Project Page */}
-
-        <Route
-          path="/projects/:slug"
-          element={<Project />}
-        />
-
-      </Routes>
-
-    </>
-
-  );
-
+            </Routes>
+        </>
+    );
 }
